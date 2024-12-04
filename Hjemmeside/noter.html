@@ -1,22 +1,32 @@
 <!DOCTYPE html> <!--Fortæller programmet, at filen skal være en html-->
 <html> <!--alt imellem <html> og </html> er selve hjemmesiden, altså alt det efterfølgende skrives i html-->
+
     <head> <!--alt imellem <head> og </head> er opsætningen af siden, men vises ikke på skærmen-->
         <meta charset="UTF-8"> <!--dette fortæller hvilken tegnkodning, der skal bruges. UTF-8 er et tegnsprog, der understøttes af næsten alle sprog. Det er vigtigt, så programmet f.eks. kan skrive specielle tegn.-->
+        <link rel="stylesheet" href="mystyles.css"> <!--Her har jeg linket til et css-stylesheet (se dokumentet). Dette gør, at jeg kan style min hjemmeside f.eks. vælge, at alle h1 skal være en bestemt farve osv. Hver gang programmet ser en h1, vil den kigge på stylesheetet og se hvad farven skal være.-->
     </head>
+
     <body> <!--alt imellem <body> og </body> er alt det, der vises på hjemmesiden-->
         <h1>Freja</h1> <!--h1 står for heading 1-->
-        <h2>Hej, velkommen til min hjemmeside</h2> <!--h2 står for heading 2 og vil gør, at alt tekst står på næste linje. Yderligere findes h3, h4, h5 og h6-->
-        <p>I min fritid kan jeg godt lide at klatre!</p> <!--p står for paragraph og gør at teksten står i et nyt afsnit. Man kan også style paragraf, så man vælger mellemrummet, man kan få ting til at stå ude i siden i stedet for i venstre side osv.-->
+        <h2><center>Hej, velkommen til min hjemmeside</center></h2> <!--h2 står for heading 2 og vil gør, at alt tekst står på næste linje. Yderligere findes h3, h4, h5 og h6. Derudover betyder <center> at teksten står i midten.-->
+        <p>Jeg har informatik C med MP</p> <!--p står for paragraph og gør at teksten står i et nyt afsnit. Man kan også style paragraf, så man vælger mellemrummet, man kan få ting til at stå ude i siden i stedet for i venstre side osv.-->
+        <p class="non-highlight">I min fritid kan jeg godt lide <span class="highlight">at klatre!</span></p> <!--*-->
         <ol> <!--ol står for ordered list og skaber en nummereret liste (følgende liste er ikke nummereret, ved ikke hvorfor)-->
-            <p>hej</p>
-            <p>med</p>
-            <p>dig</p>
+            <li>hej</li> <!--Når jeg skriver en liste, skal jeg bruge <li> i stedet for <p>-->
+            <li>med</li>
+            <li>dig</li>
         </ol> 
         <ul> <!--ul står for unordered list og skaber en ikke-nummereret liste-->
-            <p>hej</p>
-            <p>med</p>
-            <p>dig</p>
+            <li>hej</li>
+            <li>med</li>
+            <li>dig</li>
         </ul>
         <br>Hej<br> <!--dette gør, at teksten går ned på næste linje. Forskellen mellem p og br er, at de gør det samme, hvis man IKKE styler p.-->
+        <img src="Billeder/IMG_4915.jpeg" width=30%> <!--Her har jeg linket til et billede med størrelsen 30%-->
+        <a href="url link"> navnet på linket </a> <!--Dette er måden, hvorpå man indsætter links-->
     </body>
+
 </html>
+
+*Her har jeg sagt, at alt indenfor <p></p> skal følge stylingen for non-highlight fra mit css-stylesheet
+*Derudover har jeg lavet et <span></span> midt indeni, hvor alt indenfor den følger stylingen for highlight fra mit css-stylesheet, men står på samme linje
